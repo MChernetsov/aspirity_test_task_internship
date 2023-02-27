@@ -1,0 +1,1 @@
+# aspirity_test_task_internship
