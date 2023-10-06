@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    HomeRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const HomePage(),
+      );
+    },
     PostRoute.name: (routeData) {
       final args = routeData.argsAs<PostRouteArgs>();
       return AutoRoutePage<dynamic>(
@@ -25,13 +31,21 @@ abstract class _$AppRouter extends RootStackRouter {
         ),
       );
     },
-    HomeRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const HomePage(),
-      );
-    },
   };
+}
+
+/// generated route for
+/// [HomePage]
+class HomeRoute extends PageRouteInfo<void> {
+  const HomeRoute({List<PageRouteInfo>? children})
+      : super(
+          HomeRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -69,18 +83,4 @@ class PostRouteArgs {
   String toString() {
     return 'PostRouteArgs{key: $key, id: $id}';
   }
-}
-
-/// generated route for
-/// [HomePage]
-class HomeRoute extends PageRouteInfo<void> {
-  const HomeRoute({List<PageRouteInfo>? children})
-      : super(
-          HomeRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'HomeRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -1,3 +1,4 @@
+import 'package:injectable/injectable.dart';
 import 'package:internship/domain/comment.dart';
 import 'package:internship/domain/post.dart';
 import 'package:internship/domain/user.dart';

@@ -14,17 +14,21 @@ dependencies:
 
   freezed_annotation: ^2.4.1
 
+  #This is platform dependency to Mock
   package_info_plus: ^4.1.0
   json_annotation: ^4.8.1
   auto_route: ^7.4.0
   get_it: ^7.6.4
-  injectable: ^2.3.0
+  injectable: ^2.1.1
   flutter_bloc: ^8.1.3
   retrofit: ^4.0.2
   dio: ^5.3.3
+  mocktail: ^1.0.1
 
 dev_dependencies:
   flutter_test:
+    sdk: flutter
+  integration_test:
     sdk: flutter
 
   flutter_lints: ^2.0.3
